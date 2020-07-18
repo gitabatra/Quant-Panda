@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>QuantPanda </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <link rel="shortcut icon" type="image/x-icon" href="..\static\images\favicon.ico">
+ 
+    
+</head>
+<body>
+
+<nav class="navbar">
+<a class="navbar-brand" href="#">
+    <img src="..\static\images\logo.jpg" alt="Logo" style="width:65px;">
+</a>
+  <div class="container-fluid">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Home</a></li>
+        <li><a class="active">Documentation</a></li>
+        <li><a href="{{ url_for('rb') }}">Backtest</a></li>
+        <li><a href="{{ url_for('resource') }}">Resources</a></li>
+      </ul>
+  </div>
+</nav>
+
+    
+
+
+<div class="d-flex" id="wrapper">
+    <div class="row">
+   <div class="col-sm-4" style="width:300px;"> 
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper" style="max-height: calc(100vh - 9rem);overflow-y: auto;">
+      <div class="sidebar-heading"><h3>Technical Indicators</h3></div>
+      <div class="list-group list-group-flush">
+        <a href="mov_avg.html" target="content" id="side" class="list-group-item list-group-item-action bg-light"><b>Moving averages</b></a>
+        <a href="template2.html" target="content" id="side" class="list-group-item list-group-item-action bg-light"><b>Moving Average Crossover</b></a>
+        <a href="#" id="side" class="list-group-item list-group-item-action bg-light"><b>Moving Average Convergence Divergence</b></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><b>Relative Strength Indicator</b></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><b>Average Directional Indicator</b></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><b>Stochastic Oscillator</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Average True Range</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Bollinger Bands</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Parabolic Support and Resistance</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Ichimoku</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Faber's Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Adaptive Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Vigilant Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Elastic Asset Allocation Tactical Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Active Combined Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Dual Momentum Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Paired Switching Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>testdata</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>testdata</b></a>
+      </div>
+    </div>
+	</div>
+    <!-- /#sidebar-wrapper -->
+    
+	
+    <!-- Page Content -->
+        <div id="page-content-wrapper" class="col" style="max-height: calc(100vh - 9rem);overflow-y: auto;">
+		  
+		<div class="embed-responsive embed-responsive-16by9">
+        <iframe id="content" name="content" src="template2.html" class="embed-responsive-item" allowfullscreen>
+		 
+		</iframe>
+    </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  </div>
+  <!-- /#wrapper -->
+</div>
+</div>
+</body>
+</html>
