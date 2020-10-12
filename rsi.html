@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>QuantPanda Documentation</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="..\static\images\favicon.ico">
+<style>
+    .data{
+        margin: 10px;
+    }
+    body{
+        padding-top: 32px;
+		overflow-x:hidden;
+    }
+</style>
+</head>
+
+<body>
+<div class="data">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:black;">
+        <a class="navbar-brand" href="#">
+        <img src="..\static\images\logo.jpg" alt="Logo" height="40">
+        </a>
+            <div class="navbar-nav ml-auto">
+			    <a href="#" class="nav-item nav-link">Home</a>
+                <a class="nav-item nav-link active">Documentation</a>
+                <a class="nav-item nav-link" href="{{ url_for('rb') }}">Backtest</a>
+				<a class="nav-item nav-link">StockOptionScreener</a>
+                <a class="nav-item nav-link" href="{{ url_for('resource') }}">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Content -->    
+    <div class="d-flex">
+	<div class="row">
+	<div class="col-sm-3 col-md-6 col-lg-4">
+	<nav class="nav flex-column">
+	    <br>
+		<a href="documentation.html" class="list-group-item list-group-item-action bg-light"><h3>Technical Indicators</h3></a>
+		<a href="mov_avg.html" target="_top" id="side" class="list-group-item list-group-item-action bg-light"><b>Moving averages</b></a>
+        <a href="moving_crossover.html" target="_top" id="side" class="list-group-item list-group-item-action bg-light"><b>Moving Average Crossover</b></a>
+        <a href="macd.html" target="_top" id="side" class="list-group-item list-group-item-action bg-light"><b>Moving Average Convergence Divergence</b></a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark active"><b>Relative Strength Indicator</b></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><b>Average Directional Indicator</b></a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><b>Stochastic Oscillator</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Average True Range</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Bollinger Bands</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Parabolic Support and Resistance</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Ichimoku</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Faber's Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Adaptive Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Vigilant Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Elastic Asset Allocation Tactical Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Active Combined Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Dual Momentum Asset Allocation</b></a>
+		<a href="#" class="list-group-item list-group-item-action bg-light"><b>Paired Switching Asset Allocation</b></a>
+    </nav>
+</div>
+<div class="col-sm-9 col-md-6 col-lg-8">
+<div class="main-container" id="div_displayfrom">
+ <div class="container-fluid">
+     <br><br><h1>Relative Strength Index(RSI)</h1><hr>
+     <p>Relative strength index is a momentum indicator developed by J. Welles wilder. It is used in technical analysis to measure the speed and change of price movements i.e. 
+	 the magnitude of recent price changes. It compares the magnitude of recent gains to the magnitude of recent loses in an attempt to determine overbought and oversold conditions
+	 of a security. Signals can also be genertaed by looking for divergences, failure swings and centerline crossovers.<br>
+	 <ul>
+	     <li>RSI oscillates between 0 and 100 and it is considered overbought when above 70 and oversold when below 30.</li>
+         <li>RSI is a powerful analytical tool which will help the investor choose the right combination of securities for their portfolio construction thus reducing the risk and 
+		     incresing the resturn.</li>
+         <li>It gives strongest signals during the period of sideways and non trending ranges.</li>
+         <li>It can also be used to identify the general trend.</li>
+    </ul>		 
+	</p>
+    <h2>Interpretation</h2><hr>
+	RSI can be calculated as:
+	<br>
+	<img src="..\static\images\rsi_formula.png" style="width:400px;" alt="formula image"/><br><br>
+	<p>
+	The RSI can be calculated for any number of days depending upon the analyst's choice and his/her preferred time frame of trading. The most commonly used time period is the 14-day
+	RSI. However, some analysts use a 5-day RSI, a 7-day RSI or even a 9-day RSI for quick trading. RSI may be  used for long term investment. In case of long term investment the  period under consideration will also be long. For example, 56day RSI for a stock may be computed on two year data of the stock and 200 day RSI for a stock may be computed on eight year data. It is not necessary to use daily data for the  computation of RSI in case of long term investments as it may involve lots of computations, instead weekly or monthly data can be used for the computation of RSI in long term.</p><br><br>
+	<h2> Trade with RSI</h2><hr>
+	<p> Unlike the MACD Histogram, RSI has defining boundaries. It is designed to follow the price momentum as an oscillator that ranges between 0 and 100. Divergences are uswd for interpreting the Relative strengrh index.
+	<br>RSI gives four types of trading signals.<br>
+	<ol>
+	<li>Divergences<br>
+	<b> Bullish divergences give buy signals</b><br>
+	These occur when the price falls to a new low but RSI makes a shallower bottom than during its previous decline.<br>
+	<i>Trading</i>: Buy as soon as the RSI turns up from its second bottom, and place a protective stop below the latest minor price low.<br> <br>
+	<b> Bearish divergences give sell signals </b><br>
+	These occur when prices rally to a new peak but RSI makes a lower top than during the previous rally.<br>
+    <i> Trading</i>: Sell short as soon as RSI turns down from its second top, and place a protective stop above the latest minor price high.<br><br></li><br>
+	<li>Charting patterns<br>
+	<ul>
+	    <li>When RSI breaks its down trend line, place an order to buy above the price trend line in order to catch an upside breakout.</li>
+        <li>When RSI breaks its up trend line, place an order to sell short below the price trend line to catch a downside breakout.</li>
+    </ul></li><br>
+    <li>RSI Levels<br>
+    <ul>
+        <li>Buy when RSI declines below its lower reference line, and then rallies above it.</li>
+        <li>Sell short when RSI rises above its upper reference line, and then crosses below it.</li>
+    </ul></li><br>
+    <li>Overbought/Oversold<br>
+    Wilder recommended using 70 and 30 as overbought and oversold levels, respectively:<br>
+    <ul>
+        <li>Generally, if the RSI rises above 30 after falling below 25, it is considered bullish for the underlying security.</li>
+        <li>Conversely, if the RSI falls below 70, after reaching extreme reading of 80-90, it is a bearish signal.</li>
+    </ul></li>
+    </ol>	
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
